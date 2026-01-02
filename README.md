@@ -58,11 +58,20 @@ _(What data do we have available, and how can I use it?)_
 
 **3. Aggregates and anomalies**
 
-_(The high level metrics, outliers,and unexpected patterns)_
+Look at total USD price across months, products, and averages. Identify minimums, maximums, and any outliers._(The high level metrics, outliers,and unexpected patterns)_
+<img width="1287" height="566" alt="Ảnh màn hình 2026-01-03 lúc 01 39 28" src="https://github.com/user-attachments/assets/8f1afc10-1524-46f5-be26-c24ef5385a2b" /> 
+- Metrics and Dimension relevant to each teams
+  - Finance Team:
+    - Total sales across 2019-2022 is around ($6.1million), ranging in montly sales from $80k to $500k
+    - Top performing product is gaming monitor(almost $2M total sales), worst performing os gaming headset with $800. (might be missing data and would need to check with the finance team.
+    - All products has a significant spike in sales 2020 onwards, following the general trend in total sales. This indicates a macro or company-wide impact (mostly likely due to COVID)
 
-- Look at total USD price across months, products, and averages. Identify minimums, maximums, and any outliers.
-
-**4. Notable segments**
+  - Marketing/Product Team:
+    - Worst performing category is headsets, which are responsible for less than 2% of sales
+    - Dec 2020 saw a large spike in sales - seems like fall and winter month, which might indicates impact factors comes from promotions or holiday season
+    - Almost all product exhibited a spike in Dec 2020 - look into campaigns and promotions at this time 
+      
+**4. Notable segments** ~
 
 _(Slice by category, time,or other key dimension to surface early insights)_
 
