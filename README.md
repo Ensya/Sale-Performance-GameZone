@@ -16,10 +16,21 @@ An interactive Tableau dashboard used to report and explore sales trends can be 
 
 The companies main database structure as seen below consists of 2 tables: Orders and Region, with a total row count of 21864 records. A description of each table is as follows:
 - **Orders :**
-  - ORDER_ID
-  - 
-- **Region:**
+  - USER_ID: Each order have an unique id.
+  - ORDER_ID: Unique order id. However some duplicates found in this dataset within unique user id. 
+  - PURCHASE_TS: Purchasing timestamp from customers. 
+  - SHIP_TS: Shipping timestamp
+  - PRODUCT_NAME: Product sold within the order
+  - PRODUCT_ID: Id of product
+  - USD_PRICE: Revenue
+  - PURCHASE_PLATFORM: Order was made through website or mobile app.
+  - MARKETING_CHANNEL: The channel used for selling (affiliate, directly,email, social media, unknown channel)
+  - ACCOUNT_CREATION_METHOD: Account can be made through multiple method (Desktop,mobile, tablet, tv,unknown method). Some missing information found in both of the marketing channel and account creation method, which show that there are a correlation of missing value between these columns, however, the magnitude 
+  - COUNTRY_CODE: Code of country, and I can now where's it come from (region).
 
+- **Region:**
+  - COUNTRY_CODE: Code of country of customers
+  - REGION: Region that the order belongs. 
 
 
 ## Exploratory Data Analysis (EDA)
