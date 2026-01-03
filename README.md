@@ -8,7 +8,6 @@ This project will show how can I solve real business problems.
 
 The Excel file with multiple sheets ( raw and cleaned ones) for this analysis can be found [[here](https://github.com/Ensya/Sale-Performance-GameZone/gamezone-orders-data.xlsx)]
 
-An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
 
 
 
@@ -75,4 +74,32 @@ Look at total USD price across months, products, and averages. Identify minimums
 
 _(Slice by category, time,or other key dimension to surface early insights)_
 
-- 
+To prevent analysis paralysis from the beginning is to identify the core questions and ways to solve it. By using North Stars Metrics, North Stars Dimensions and North Stars Team Goals
+
+_Note: This is a porfolio project so I'm going to just focus on the USD price or total revenue as I don't have a lot of clarity from our stakeholder_
+
+- Metrics: USD Price, Total Revenue, Order Count, AOV ( Average Order Vavlue)
+- Dimensions: Region, Marketing Channel, Product, Time
+- Team Goals:
+  - Marketing Team: To attract more customers or get them to buy more
+  - Finance Team: Where is the revenue or loss coming from?
+  - Product Team: What features or product lines are popular?
+
+## Insights Deep Dive  
+### Overall Trend 
+- Sales surged to record highs in late 2020 and then sharply declined in February 
+# Dashboard
+
+An interactive Tableau dashboard used to report and explore sales trends can be found here [[link](https://public.tableau.com/views/GameZoneSalesDashboard_17674577239320/SalesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)].
+
+<img width="2778" height="2718" alt="Sales Dashboard" src="https://github.com/user-attachments/assets/afb460f1-8d07-49a9-b002-a49086297e47" />
+
+
+</p>
+
+
+
+
+
+
+
