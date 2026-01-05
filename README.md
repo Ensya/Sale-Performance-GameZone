@@ -1,10 +1,10 @@
 # Sale Performance - Exploratory Data Analysis
 
 ## Project Background
-GameZone  -  a fictional company founded in 2018 is selling new and refurbished gaming producrs all around the world, and they are mostly sell their products through their online website, mobile app and variety of marketing channels. With more than 20k records. 
+GameZone  -  a fictional company founded in 2018 is selling new and refurbished gaming products all around the world, and they are mostly sell their products through their online website, mobile app and variety of marketing channels.
 
-This project will show how can I solve real business problems. 
- 
+The goal of this project was to extract actionable insights on sales performance, customer trends, regional growth, and product performance using interactive dashboards and data modeling.
+The analysis supports business decisions in marketing, inventory, and regional strategy.
 
 The Excel file with multiple sheets ( raw and cleaned ones) for this analysis can be found [[here](https://github.com/Ensya/Sale-Performance-GameZone/gamezone-orders-data.xlsx)]
 
@@ -13,7 +13,7 @@ The Excel file with multiple sheets ( raw and cleaned ones) for this analysis ca
 
 ## Data Structure & Initial Checks
 
-The companies main database structure as seen below consists of 2 tables: Orders and Region, with a total row count of 21864 records. A description of each table is as follows:
+The companies main database structure as seen below consists of 2 tables: Orders and Region, with a total row count of 21864 records. A description of each table with multiple columns is as follows:
 - **Orders :**
   - USER_ID: Each order have an unique id.
   - ORDER_ID: Unique order id. However some duplicates found in this dataset within unique user id. 
@@ -29,9 +29,25 @@ The companies main database structure as seen below consists of 2 tables: Orders
 
 - **Region:**
   - COUNTRY_CODE: Code of country of customers
-  - REGION: Region that the order belongs. 
+  - REGION: Region that the order belongs.
+    
+**Data Model Design:**
 
+`orders_cleaned` (fact table)
 
+`region_cleaned` (region dimension)
+
+`Date` (date dimension)
+
+Star schema with relationships on `COUNTRY_CODE` and `PURCHASE_TS`
+
+### 🔗 Data Model Diagram
+
+ <img width="562" height="536" alt="Ảnh màn hình 2026-01-04 lúc 15 43 34" src="https://github.com/user-attachments/assets/77564179-dd42-4eb7-95a1-ac7addaa1f59" />
+
+*This visual illustrates the data relationships between `orders_cleaned`, `region_cleaned`, and the `Date` table.*
+
+---
 ## Exploratory Data Analysis (EDA)
   
   Gathering all the requirements is the antidote to getting lost in exploratory data analysis, and to get very intentional about what the delverable should be.
@@ -42,7 +58,7 @@ The companies main database structure as seen below consists of 2 tables: Orders
 
 ### SCAN Framework
 
- _How did total revenue dollars across all products perform during 2019 - 2022? Conduct some initial analysis to help product, marketing, and finance managers understand high-level trends_ 
+ _How did total revenue dollars across all products perform during 2019 - 2022? Some initial analysis to help product, marketing, and finance managers understand high-level trends_ 
 
 **1. Stakeholder goal**
 
@@ -86,8 +102,23 @@ _Note: This is a porfolio project so I'm going to just focus on the USD price or
   - Product Team: What features or product lines are popular?
 
 ## Insights Deep Dive  
-### Overall Trend 
-- Sales surged to record highs in late 2020 and then sharply declined in February 
+### High Level Sales 
+- Sales surged to record highs in late 2020 and then sharply declined in February 2021, nearing pre-COVID levels
+- Sales more than doubled in the early 2020, with all-time highs in September and December in 2020
+### Product insights: 
+- Along the products aspect, Gaming monitor, Nintendo Switch, and Xbox are the main ddrivers of the dip - all three exhibit the same plateuing behaviour in 2021 and 2022. 
+### Region Insights: 
+- For Xbox, the drops is mostly contained to the NA region and direct traffic - may indicate a shift in trends or competitiors there
+- The sales mix by channel is directly taking up from 70% to 80% of total revenue (roughly around 25%). Direct is the main driver of all sales. All other channels pale in comparison.
+## Recommendations 
+### Finance Team 
+- Investigate the main drivers of the dip in sales in the years following COVID. As the metric showed without any dimentional insight and, for the contextual insights, during the covid year there was a huge spike in sales, which confirms our understanding that when people are spending more time at home, which leads to higher willingness to spend on gaming products.
+### Product Team 
+- Low hanging fruit recommendation is to consider discountinuing the headsets because it only make up less than 2% of overall revenue.
+### Marketing Team
+- Push more promotions and marketing strategies towards North American sales fro gaming monitor and playstation, which have more traction than other top 2 products
+- Double down on Winter sales by pushing promotions for top 3 products in October/November
+- Checking with marketing team about attriobution to marketing channel if it is correct. As dirrect seemsoversized. Focus marketing startegy on email channel, which shows potential up tick, in order to shift away from reliance on Direct traffic. 
 # Dashboard
 
 An interactive Tableau dashboard used to report and explore sales trends can be found here [[link](https://public.tableau.com/views/GameZoneSalesDashboard_17674577239320/SalesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)].
